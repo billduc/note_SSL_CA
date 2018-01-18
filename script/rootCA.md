@@ -2,7 +2,7 @@
 # Note_SSL_CA
 
 
-#Create the root key
+##Create the root key
 Use 4096 bits for all root and intermediate certificate authority keys. 
 ```
  cd /root/ca
@@ -14,7 +14,7 @@ Verifying - Enter pass phrase for ca.key.pem: secretpassword
  chmod 400 private/ca.key.pem
 ```
 
-# Create the root certificate
+## Create the root certificate
 ```
  cd /root/ca
  openssl req -config openssl.cnf \
@@ -37,7 +37,7 @@ Email Address []:
  chmod 444 certs/ca.cert.pem
 ```
 
-# Verify the root certificate
+## Verify the root certificate
 ```
  openssl x509 -noout -text -in certs/ca.cert.pem
 ```
